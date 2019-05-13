@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Noman Group</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Boogaloo|Open+Sans:300,400|Oswald:700">
+	<link href="https://fonts.googleapis.com/css?family=Rye" rel="stylesheet">
+	<link rel="stylesheet" href="css/main2.css">
+	<link rel="stylesheet" href="css/main1.css">
+	<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+
+
+<div class="content-wrapper">
+		<img src="img/ngl.jpeg" class="logo" alt="NG Logo">
+		<nav>
+			<ul>
+				<li><a href="http://www.nomangroup.com/bpage/at-a-glance/">At a Glance</a></li>
+				<li><a href="https://www.facebook.com/pages/Noman-Group-of-Industries/165019040207302" target="_blank" class="fb"><img src="img/fbc.jpg" width="40" height="40"></a></li>
+				<li><a href="https://twitter.com/NomanGroup" target="_blank" class="fb"><img src="img/tc.png" width="40" height="40"></a></li>
+				<li><a href="https://www.google.com/maps/place/Noman+Group/@23.7914609,90.4114776,17z/data=!3m1!4b1!4m5!3m4!1s0x3755c7a0da723f1b:0xa8b16c8de8b6654e!8m2!3d23.791456!4d90.4136663">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<div class="hero">
+	<h1>Noman Group</h1>
+	<p>A Leading Fabrics Manufacturing Company In Bangladesh</p>
+</div>
+
+<main role="main">
+	<div class="content-wrapper">
+
+		<p id="press-quote">To manufacture and supply the finest quality textile products on time. — Consumer Mission</p>
+		<p>We believe our first responsibility is to our buyers and end consumers who use our products. It is paramount that we ensure the highest quality to meet their needs. As a production-oriented business, we also need to maintain competitive prices through cost reduction. Clients should always receive their desired order on time and we will always continue to maintain relationship with them.</p>
+		<h2>Our History</h2>
+		<figure>
+			<img src="img/mrnurul.jpg" alt="William Dozer">
+			<figcaption>Md. Nurul Islam in the begining of his professional career</figcaption>
+		</figure>
+		<p>In 1980 , Md. Nurul Islam who is founder of <em>Noman Group,<em> started his journey with a vision of establishing NG as the largest textile manufacturer in the world. With sustained growth over the years and an ever-expanding list of international clientele, it has solidified its position as a leading vertically integrated textile group in Bangladesh</p>
+	</div>
+</main>
+
+<div class="outer-wrapper">
+	<header class="clearfix">
+		<h1>List of Items</h1>
+		<select id="item-list">
+			<option value="ngi">Choose a Item</option>
+			<option value="oxs">Oxford shirt</option>
+			<option value="bsl">Bermuda short</option>
+			<option value="bt">Terry Towel</option>
+			<option value="ps">Polo Shirt</option>
+			<option value="bp">Basic Pant</option>
+			<option value="ccs">Chambray Casual Shirt</option>
+			<option value="cs">Cargo Short</option>
+			<option value="dj">Denim Jacket</option>
+			<option value="kh">Knitted Hoodie</option>
+			<option value="lt">Trouse</option>
+			<option value="bs">Bed Sheet</option>
+
+		</select>
+	</header>
+
+	<div class="main clearfix">
+		<div class="img-holder">
+			<div>
+				<img id="info-pic" src="img1/ngi.jpg" alt="United States of America" width="260" height="260">
+				<p id="info-name">Product by NG</p>
+			</div>
+		</div>
+		<div class="info-holder">
+			<p><strong>Abbreviation: </strong><span id="info-abbreviation">NG</span></p>
+			<p><strong>style: </strong><span id="info-style">variety</span></p>
+			<p><strong>design: </strong><span id="info-design">variety</span></p>
+			<p><strong>color: </strong><span id="info-color">variety</span></p>
+			<p><strong>gsm: </strong><span id="info-gsm">variety</span></p>
+			<p><strong>End use: </strong><span id="info-enduse">variety</span></p>
+
+		</div>
+	</div>
+</div>
+<div class="outer-wrapper">
+	<div class="content-wrapper">
+		<header>
+			<h1>Discount Card</h1>
+			<p class="subtitle">Discount with All Item</p>
+		</header>
+		<main role="main">
+			<div class="first step">
+				<h2>1. Choose a Item</h2>
+				<select name="states" id="states">
+					<option selected disabled value="empty-state">Click Me</option>
+					<option value="oxs">Oxford shirt</option>
+					<option value="bsl">Bermuda short</option>
+					<option value="bt">Terry Towel</option>
+					<option value="ps">Polo Shirt</option>
+					<option value="bp">Basic Pant</option>
+					<option value="ccs">Chambray Casual Shirt</option>
+					<option value="cs">Cargo Short</option>
+					<option value="dj">Denim Jacket</option>
+					<option value="kh">Knitted Hoodie</option>
+					<option value="lt">Trouse</option>
+					<option value="bs">Bed Sheet</option>
+
+				</select>
+			</div>
+			<div class="second step">
+				<h2>2. Enjoy Your Discount!</h2>
+				<div id="postcard">
+					<p id="greeting">To get a Discount card </p>
+					<p id="state-heading">Choose a item</p>
+				</div>
+			</div>
+		</main>
+	</div>
+</div>
+<script src="js/state-data1.js"></script>
+<script>
+	document.getElementById('item-list').onchange = function() {
+		var selected = this.value;
+		document.getElementById('info-pic').src= 'img1/'+selected+'.jpg';
+		document.getElementById('info-name').textContent = stateData[this.value].name;
+		document.getElementById('info-abbreviation').textContent = stateData[this.value].abbr;
+		document.getElementById('info-style').textContent = stateData[this.value].style;
+		document.getElementById('info-design').textContent = stateData[this.value].design;
+		document.getElementById('info-color').textContent = stateData[this.value].color;
+		document.getElementById('info-gsm').textContent = stateData[this.value].gsm;
+		document.getElementById('info-enduse').textContent = stateData[this.value].enduse;
+
+	};
+</script>
+<footer>
+	<p>Copyright © NG</p>
+</footer>
+<script>
+	var quotesArray = [
+		'To committed to a sustainable corporate concept of concomitant prosperity. — Chairman of NG',
+		'To manufacture and supply the finest quality textile products on time. — Consumer Mission',
+		'To act responsibly as a global corporate citizen and ensure the well-being and growth of our employees and all other stakeholders. — Social Mission',
+			];
+	var randomNumber = Math.floor(Math.random()*quotesArray.length);
+	document.getElementById('press-quote').textContent = '“' + quotesArray[randomNumber].split(' — ')[0] + '” — ' + quotesArray[randomNumber].split(' — ')[1];
+	//console.log( 	quotesArray[randomNumber].split(' — ')[0] );
+</script>
+<div class="container">
+	<h1>Career Opportunity</h1>
+	<p>Thank you so much for your interest in working with <em>NG<em> family! Please fill out the brief form below to give us a little background information about yourself. The hiring dept. expert will contact you via email or phone with seven days to discuss the opportunity with you further.</p>
+	<div class="form-container">
+		<form id="vol-form">
+			<div class="form-section">
+				<label for="first-name">First Name:</label>
+				<input id="first-name" name="first-name" type="text">
+			</div>
+			<div class="form-section">
+				<label for="last-name">Last Name:</label>
+				<input id="last-name" name="last-name" type="text">
+			</div>
+			<div class="form-section">
+				<label for="email">Email:</label>
+				<input id="email" name="email" type="email">
+			</div>
+			<div class="form-section">
+				<label for="phone">Phone:</label>
+				<input id="phone" name="phone" type="tel">
+			</div>
+			<div class="form-section">
+				<label for="prev-vol">Past Experience:</label>
+				<input id="prev-vol" name="prev-vol" type="text">
+			</div>
+			<div class="form-section">
+				<label for="from-year" class="from-label">From:</label>
+				<select id="from-year" name="from-year">
+					<option value="blank"></option>
+					<option value="1999">Before 2000</option>
+					<option value="2000">2000</option>
+					<option value="2001">2001</option>
+					<option value="2002">2002</option>
+					<option value="2003">2003</option>
+					<option value="2004">2004</option>
+					<option value="2005">2005</option>
+					<option value="2006">2006</option>
+					<option value="2007">2007</option>
+					<option value="2008">2008</option>
+					<option value="2009">2009</option>
+					<option value="2010">2010</option>
+					<option value="2011">2011</option>
+					<option value="2012">2012</option>
+					<option value="2013">2013</option>
+					<option value="2014">2014</option>
+					<option value="2015">2015</option>
+					<option value="2016">2016</option>
+					<option value="2017">2017</option>
+				</select>
+				<label for="to-year" class="to-label">To:</label>
+				<select id="to-year" name="to-year">
+				</select>
+			</div>
+			<input id="submit" type="submit" value="Submit">
+		</form>
+	</div>
+</div>
+<footer>
+	<p>Made in NY <br>Copyright © multicolor gift</p>
+</footer>
+
+<script>
+	var states = document.getElementById('states');
+
+	states.onchange = function() {
+		// console.log('state index: ' + states.selectedIndex);
+		// console.log('state name: ' + states.options[states.selectedIndex].text);
+		// console.log('img/' + states.value + '@2x.jpg');
+		document.getElementById('postcard').style.backgroundImage = 'url(img/' + states.value + '@2x.jpg)';
+		document.getElementById('greeting').innerHTML = '30 % Discount';
+		document.getElementById('state-heading').innerHTML = states.options[states.selectedIndex].text;
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Image map of MNS</title>
+<style>
+	body {
+		font-family: Helvetica, Arial, sans-serif;
+		text-align: center;
+		background-color: #A4F5F6;
+	}
+	h1 {
+		font-size: 40px;
+	}
+	div {
+		width: 100%;
+	}
+	img[usemap] {
+		border: none;
+		height: auto;
+		max-width: 100%;
+		width: auto;
+	}
+	</style>
+</head>
+
+<body>
+
+<header>
+<h1> Image of Berselona player</h1>
+	<h2><i>Messi, Nymer & Suarez</i><h2>
+	<main>
+    <img src="mns.jpg" alt="" width="1200" height="675" usemap="#Map"/>
+    <map name="Map">
+      <area shape="poly" coords="154,77,111,124,113,175,135,223,66,241,30,276,10,312,3,434,57,399,98,439,107,514,116,571,108,627,119,667,234,674,401,674,415,641,405,572,358,460,339,359,343,329,351,300,158,74,170,76,194,76,209,83,223,96,230,116,238,134,246,150,250,170,251,180,251,180" href="https://en.wikipedia.org/wiki/Luis_Su%C3%A1rez" title="Suarez">
+      <area shape="poly" coords="518,54,561,90,573,124,567,155,563,195,561,215,594,212,634,212,650,212,656,239,659,266,659,344,654,432,663,491,682,588,682,665,618,669,528,671,424,667,424,514,402,367,379,305,356,278,330,252,302,230,264,182,312,191,341,199,362,206,382,209,469,72,451,103,449,130,495,60,478,62,474,69,464,83,457,89,457,98,452,106" href="https://en.wikipedia.org/wiki/Neymar" title="Nymer">
+      <area shape="poly" coords="722,60,697,76,685,95,690,125,693,150,692,169,693,199,688,218,676,254,674,284,681,324,693,353,735,426,756,476,768,542,757,590,751,634,751,659,754,671,818,671,902,672,975,672,1034,671,1027,603,997,520,969,441,962,366,976,343,1005,336,1041,336,1084,334,1122,335,1166,334,1191,327,1199,321,1197,287,1196,267,1173,263,1126,259,1086,255,1053,251,1025,244,977,226,950,226,924,217,894,209,868,211,829,210,817,192,826,175,820,148,815,135,811,101,800,85,775,71,757,66" href="https://en.wikipedia.org/wiki/Lionel_Messi" title="Messi">
+    </map>
+    </main>
+</header>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="jquery.rwdImageMaps.min.js"></script>
+<script>
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+	
+	$('area').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+	});
+});
+</script>
+</body>
+</html>

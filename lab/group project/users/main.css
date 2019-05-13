@@ -1,0 +1,21 @@
+body{
+  text-align: center;
+  background-color: #efefef;
+}
+h1{
+  text-align: center;
+  font-family: 'Gorditas', cursive;
+  font-size: 40px;
+
+}
+table{
+  width: 1100px;
+background-color: #FFF;
+  text-align: center;
+  margin: auto;
+
+}
+
+  tr{
+  padding: 10px;
+}

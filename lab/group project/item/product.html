@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Clint project</title>
+		<link rel="stylesheet" href="main.css">
+		<script src="js/clothdata.js"></script>
+		<script src="js/watchdata.js"></script>
+		<script src="js/cellphonedata.js"></script>
+</head>
+<body>
+<div id="wrap">
+
+ <!--  clothing area start-->
+
+     <div class="fashion">
+<h1 class="heading">Clothes</h1>
+<select id="cloth-list">
+  <option value="ngi">Choose a Item</option>
+  <option value="oxs">Oxford shirt</option>
+  <option value="bsl">Bermuda short</option>
+  <option value="bt">Terry Towel</option>
+  <option value="ps">Polo Shirt</option>
+  <option value="bp">Basic Pant</option>
+  <option value="ccs">Chambray Casual Shirt</option>
+  <option value="cs">Cargo Short</option>
+  <option value="dj">Denim Jacket</option>
+  <option value="kh">Knitted Hoodie</option>
+  <option value="lt">Trouse</option>
+  <option value="bs">Bed Sheet</option>
+
+</select>
+
+
+          <div>
+			          	<img id="info-pic" src="img1/ngi.jpg" alt="Fashion cloth" width="400" height="400">
+			          	<p id="info-name">Fashion world</p>
+		      </div>
+		<div class="info-holder">
+			<p><strong>Style: </strong><span id="info-style">variety</span></p>
+			<p><strong>Design: </strong><span id="info-design">variety</span></p>
+			<p><strong>Color: </strong><span id="info-color">variety</span></p>
+			<p><strong>Price: </strong><span id="info-prices">variety</span></p>
+			<p><strong><button onclick="carts()">Add to Cart</button></strong><span id="info-carts"></span></p>
+			<p><strong>
+		<form >
+			<textarea name="comments" cols="40" rows="4">Remarks:</textarea></br>
+			<input onclick="customercomnts()" type="submit" value="Submit">
+		</form> </strong><span id="info-button"></span></p>
+
+			<script>
+				document.getElementById('cloth-list').onchange = function() {
+					var selected = this.value;
+					document.getElementById('info-pic').src= 'img1/'+selected+'.jpg';
+					document.getElementById('info-name').textContent = clothData[this.value].name;
+					document.getElementById('info-style').textContent = clothData[this.value].style;
+					document.getElementById('info-design').textContent = clothData[this.value].design;
+					document.getElementById('info-color').textContent = clothData[this.value].color;
+					document.getElementById('info-prices').textContent = clothData[this.value].price;
+					document.getElementById('info-carts').textContent = clothData[this.value].carts;
+					document.getElementById('info-button').textContent = clothData[this.value].button;
+
+				};
+				function customercomnts(){
+    alert("Thanks for your comments.");
+}
+
+function carts(){
+alert("Thanks for adding to your cart.");
+}
+
+			</script>
+
+		</div>
+	</div>
+
+	<!--  clothing area end-->
+
+	 <!--  watch area start-->
+
+<div class="watch">
+	<h1 class="heading">Watches</h1>
+	<select id="watch-list">
+
+	  <option value="vw">Choose a Item</option>
+	  <option value="rw">Rolex Watch</option>
+	  <option value="thw">Tommy H</option>
+		<option value="bu">Bulova</option>
+		<option value="mk">Michael Kors</option>
+		<option value="mo">Movado</option>
+		<option value="ap">Apple</option>
+		<option value="ct">Citizen</option>
+		<option value="sm">Sumsang</option>
+		<option value="gc">Gucci</option>
+		<option value="se">Seiko</option>
+
+ </select>
+
+
+	          <div>
+				          	<img id="info-pic2" src="img2/vw.jpg" alt="Fashion cloth" width="400" height="400">
+				          	<p id="info-brandname">Style world</p>
+			      </div>
+			<div class="info-holder">
+				<p><strong>Symbol: </strong><span id="info-symbol">Varity</span></p>
+				<p><strong>Color: </strong><span id="info-color1">variety</span></p>
+				<p><strong>Model: </strong><span id="info-model">variety</span></p>
+				<p><strong>Price: </strong><span id="info-price">variety</span></p>
+				<p><strong><button onclick="carts()">Add to Cart</button></strong><span id="info-carts"></span></p>
+				<p><strong>
+			<form >
+				<textarea name="comments" cols="40" rows="4">Remarks:</textarea></br>
+				<input onclick="customercomnts()" type="submit" value="Submit">
+			</form> </strong><span id="info-button"></span></p>
+
+				<script>
+					document.getElementById('watch-list').onchange = function() {
+						var selected1 = this.value;
+						document.getElementById('info-pic2').src= 'img2/'+selected1+'.jpg';
+						document.getElementById('info-brandname').textContent = watchData[this.value].brandname;
+						document.getElementById('info-symbol').textContent = watchData[this.value].symbol;
+						document.getElementById('info-color1').textContent = watchData[this.value].color;
+						document.getElementById('info-model').textContent = watchData[this.value].model;
+						document.getElementById('info-price').textContent = watchData[this.value].price;
+
+
+					};
+				</script>
+
+			</div>
+</div>
+<!--  watch area end-->
+
+ <!--  cellphone area start-->
+
+<div class="cellphone">
+<h1 class="heading">Mobile</h1>
+<select id="cellphone-list">
+  <option value="phone">Choose a Item</option>
+  <option value="np">Nokia</option>
+  <option value="htc">HTC</option>
+	<option value="bl">Blu</option>
+	<option value="bb">BlackBerry</option>
+	<option value="ip">Iphone</option>
+	<option value="mo">Motorola</option>
+	<option value="le">Lenovo</option>
+	<option value="lg">Lg</option>
+	<option value="so">Sony</option>
+	<option value="su">Sumsung</option>
+
+</select>
+<div>
+				<img id="info-pic3" src="img3/phone.jpg" alt="Cell Phone" width="400" height="400">
+				<p id="inf-name">Connecting world</p>
+</div>
+<div class="info-holder">
+<p><strong>Model: </strong><span id="inf-model">Varity</span></p>
+<p><strong>Capacity: </strong><span id="inf-capacity">variety</span></p>
+<p><strong>Color: </strong><span id="inf-color">variety</span></p>
+<p><strong>Price: </strong><span id="inf-price">variety</span></p>
+<p><strong><button onclick="carts()">Add to Cart</button></strong><span id="info-carts"></span></p>
+<p><strong>
+<form >
+<textarea name="comments" cols="40" rows="4">Remarks:</textarea></br>
+<input onclick="customercomnts()" type="submit" value="Submit">
+</form> </strong><span id="info-button"></span></p>
+
+<script>
+document.getElementById('cellphone-list').onchange = function() {
+var selected2 = this.value;
+document.getElementById('info-pic3').src= 'img3/'+selected2+'.jpg';
+document.getElementById('inf-name').textContent = cellphoneData[this.value].brandname;
+document.getElementById('inf-model').textContent = cellphoneData[this.value].model;
+document.getElementById('inf-capacity').textContent = cellphoneData[this.value].capacity;
+document.getElementById('inf-color').textContent = cellphoneData[this.value].color;
+document.getElementById('inf-price').textContent = cellphoneData[this.value].price;
+
+
+};
+</script>
+
+</div>
+</div>
+
+<!--  cellphone area end-->
+
+</div>
+
+
+</body>
+</html>
