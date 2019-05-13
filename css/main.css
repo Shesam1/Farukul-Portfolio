@@ -370,7 +370,7 @@ body > footer {
 }
 
 /* copyrights block */
-body > footer .copyrights {
+body = footer .copyrights {
   display: block;
   margin-bottom: 12px;
   text-align: center;
